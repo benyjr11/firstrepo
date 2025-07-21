@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0; 
+}
+header{
+    padding: 20px 60px 20px 60px;/*top right bottom left*/;
+}
+.ffgc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bhj{
+    padding: 60px 0px 80px 0px;/*top right bottom left*/;
+   
+}
+.bhhj{
+    width: 45%;
+    margin: 0px auto 80px auto;/*top right bottom left*/  
+}
+.bhhhj{
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+  font-family: "Savate", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.bbhh{
+    text-align: center;
+    font-size: 20px;
+    color: rgb(110, 104, 104);
+    margin: 20px auto 30px auto;/*top right bottom left*/  
+}
+.ffg{
+    justify-content: space-between;
+    margin: 60px auto 0px auto;/*top right bottom left*/;
+    text-align: center;
+}
+.tth{
+    background-color: blue;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+}
+.bop{
+    text-decoration: none;
+    color: white;
+}
+/*first section after hero section*/
+.wemss{
+    padding: 60px 60px 60px 60px; /*top right bottom left*/;
+}
+.wems{
+    display: flex;
+    justify-content: space-between;
+}
+.weem{
+    width: 30%;
+    text-align: left;
+}
+.iconbox{
+    background-color: blue;
+    display: inline-block;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+.mon{
+margin: 15px 0 15px 0;/*top right bottom left*/  
+}
+.bent{
+    text-align: center;
+}
+.loop{
+    display: flex;
+    justify-content: space-between;
+}
+.loopp{
+     padding: 60px 80px 60px 80px; /*top right bottom left*/;
+}
+.spnn{
+    font-size: 55px;
+    font-weight: 900;
+}
+.tnt{
+    text-align: center;
+    font-size: 25px;
+}
+.mew{
+    margin: 20px 0px 0px 0px;/*top right bottom left*/
+    text-align: center;
+}
+.mint{
+    display: flex;
+text-align: center;
+margin: 0px auto 0px auto/*top right bottom left*/;
+font-size: 20px;
+width: 500px;
+border-style: ridge;
+border-radius: 10px;
+padding: 30px 20px 30px 10px;/*top right bottom left*/
+}
+.car{
+display: flex;
+text-align: center;
+margin: 30px auto 0px auto/*top right bottom left*/;
+font-size: 20px;
+
+width: 500px;
+border-style: ridge;
+border-radius: 10px;
+padding: 30px 20px 30px 10px;/*top right bottom left*/
+}
+.lex{
+    text-align: center;
+}
+.icnbx{
+     background-color: blue;
+    display: inline-block;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+.formsss{
+    text-align: center;
+}
+.magf{
+    margin: 20px 0px 0px 0px;/*top right bottom left*/
+    padding: 0px 0px 0px 0px;/*top right bottom left*/
+}

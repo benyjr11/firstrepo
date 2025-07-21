@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .pos1{
+            width: 300px;
+            height: 300px;
+            margin: 100px auto 0px auto;/*top right bottom left*/
+            background-color: brown;
+            position: relative;
+        } 
+        .pos2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            top: -30px;
+            left: -20px;
+        background-color: white;
+        border-radius: 100%;
+        }
+        .jugg{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="pos1">
+        <div class="pos2">
+            1
+        </div>
+    </div>
+    <section style="background-color: blue; padding: 0px 0px 0px 0px  ;">
+        <div class="jugg">
+            <div>
+                <p></p>
+            </div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </section>
+ </body>
+ </html>
