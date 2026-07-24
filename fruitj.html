@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+     .icons {
+    width: 70px;
+}
+.fruitsTabs {
+  width: 20%;
+  box-shadow: 1px 3px 3px 1px rgb(182, 182, 182);
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fruitsTabs:active,
+.fruitsTabs:hover {
+  box-shadow: 1px 3px 3px rgb(195, 195, 195);
+}
+.fruitsTabs.on {
+  border-top: 8px solid orangered;
+}
+.h4.on {
+  color: orangered;
+}
+.parentTabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  align-self: center !important;
+}
+.loadBtn {
+  align-items: center !important;
+  justify-self: center !important;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 7px 25px 7px 25px;
+}
+.loadBtn:hover,
+.loadBtn:active {
+  border: none;
+  transition: 0.5s ease;
+  box-shadow: 10px 10px 1px orangered;
+}
+.parentBtn {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.titlehead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.centerpg {
+  margin-top: 120px !important;
+}
+.contentRow {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  margin: 0 !important;
+  width: 30%;
+}
+.rowContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-img {
+  height: fit-content;
+  width: fit-content;
+  margin: 0 !important;
+}
+.container-img > img {
+  width: fit-content;
+  height: 400px;
+  width: 400px;
+}
+.mainSect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.imgSect {
+  height: 65vh;
+  background-image: url("./img/3632065.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.h4,
+.h3 {
+  color: orangered !important;
+}
+
+@media screen and (max-width: 750px) {
+  .parentTabs {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .fruitsTabs {
+    flex-direction: row;
+    width: fit-content;
+    gap: 20px;
+  }
+  .rowContent {
+    flex-direction: column;
+    gap: 20px;
+    width: 100% !important;
+    margin-top: 30px;
+  }
+  .contentRow {
+    width: fit-content !important;
+  }
+  .container-img > img {
+    width: auto;
+    height: 400px;
+  }
+}
+ 
+  .form-control {
+      border: none;
+      border-bottom: 2px dashed #ccc;
+      border-radius: 0;
+      background-color: transparent;
+      box-shadow: none;
+      
+    }
+  .form-control:focus {
+      border-color: #333;
+      box-shadow: none;
+       outline: none;
+      border-bottom: 1px dashed #ff5722
+    }
+
+ label {
+      margin-bottom: 5px;
+      color: #666;
+      font-weight: 500;
+    }
+.btn-send:hover {
+      background-color: orangered;
+    }
+.btn-send {
+      background-color: gray;
+      color:orangered;
+      border: none;
+      padding: 12px;
+      width:30% ;
+      font-size: 16px;
+      border-radius: 4px;
+      transition:  0.3s ease;
+      justify-content: center;
+    }
+
+
+.contact-form {
+      width: 20%;
+      margin: 20px ;
+      ;
+      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    .frm{
+      width: 50%;
+      
+    }
+
+    </style>
+     <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <section class=" text-dark">
+   <div class="container">
+<div class="d-flex justify-content-between">
+    <div class="me-5 py-5">
+        <h1 class="fw-bolder">Welcome to <br>Our Fruits Shop</h1>
+         <p class="fs-3">Experience the burst of flavors from  our 100% natural fruit juices, all for you! </p>
+              <p>Here at (site name) we make a blend of natural tasty fruit nutrients, where every sip is a taste of paradise! We're passionate about serving you the freshest, highest quality fruit juices that not only tantalize your tatse buds but also nourish your body. from classic favorites ,to exoctic blends, our juices are crafted to ensure you get the best of nature with every sip!</p>
+    </div>
+    <div>
+        <img src="img/colorful-fruit-juice-drinks-vegetables-plate-white-background-healthy-recipe-colorful-fruit-juice-drinks-vegetables-plate-white-391954962.webp" alt="" style="width: 600px; padding: 50px; ">
+    </div>
+
+</div>
+
+   </div>
+   <div class="d-flex justify-content-center mb-2 pb-2">
+        <button button type="button" class="btn-lg" style="background-color: orangered;"> Shop now</button>
+        <button button type="button" class="btn btn-dark btn-lg ms-2">Contact Us</button>
+   </div>
+   <div class="d-flex justify-content-center">
+  <div class=" fs-1 me-5 mb-5"><i class="bi bi-cart4 " style="color: orangered;"></i></div> 
+    <div class=" fs-1 ms-5 mb-5 "><i class="bi bi-mic-fill " style="color: orangered ;"></i></div> 
+    </div>
+</section>
+    <main class="bg-light ">
+      <div class="container-fluid">
+        <section class="container-fluid mb-5">
+          <div class="container d-flex flex-column align-items-center">
+            <h3 class="mt-5" id="logo">Our Services</h3>
+            <span
+              >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi,
+              tempore.</span
+            >
+          </div>
+          <div class="container-fluid parentTabs mt-5">
+            <div class="fruitsTabs on p-3 fade-in container">
+              <div class="fruit_child">
+                <img
+                  src="img/51492c217dd3fe7f0f89aeaeabcc989a.jpg"
+                  class="icons"
+                  alt=""
+                />
+                <div class="h4">Apple</div>
+              </div>
+              <span class="text-center">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates reiciendis eveniet unde possimus perspiciatis placeat
+                quibusdam alias nesciunt odio! Error?
+              </span>
+            </div>
+            <div class="fruitsTabs on p-3 fade-in container">
+              <div class="fruit_child">
+                <img src="img/apple-slice-falling-into-juice-creating-splashes-isolated-white-background_1004890-2533.jpg" class="icons" alt="" />
+                <div class="h4">Orange</div>
+              </div>
+              <span class="text-center">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates reiciendis eveniet unde possimus perspiciatis placeat
+                quibusdam alias nesciunt odio! Error?
+              </span>
+            </div>
+            <div class="fruitsTabs p-3 on fade-in container">
+              <div class="fruit_child">
+                <img src="img/424d8787143032e4f43b96691b4d22bb.jpg" class="icons" alt="" />
+                <div class="h4">Mango</div>
+              </div>
+              <span class="text-center">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates reiciendis eveniet unde possimus perspiciatis placeat
+                quibusdam alias nesciunt odio! Error?
+              </span>
+            </div>
+          </div>
+          <div class="container-fluid fade-in mt-3 mb-5 parentBtn">
+            <button class="loadBtn mt-5">Load more</button>
+          </div>
+        </section>
+
+        <section class="centerpg">
+          <div class="titlehead fade-in mt-5">
+            <div class="h2" style="font-weight: 700">Fresh Drinks</div>
+            <span style="text-align: center"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              perferendis magnam fuga at recusandae facere.</span
+            >
+          </div>
+
+          <div class="mainSect container">
+            <div class="container-fluid fade-in mb-5 mt-5 rowContent">
+              <div class="container contentRow">
+                <div class="h3">Best Fruits Ever</div>
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laudantium doloribus dicta quo autem dolorem suscipit nam
+                  recusandae, facere laboriosam eum architecto? Ratione
+                  cupiditate iste reprehenderit saepe beatae, quia blanditiis
+                  asperiores.</span
+                >
+                <button class="loadBtn">Buy now</button>
+              </div>
+              <div class="container-img">
+                <img src="img/ai-generated-8529150_1280.png" alt="" />
+              </div>
+            </div>
+            <div class="container fade-in mb-5 rowContent">
+              <div class="container contentRow">
+                <div class="h3">More Than Just Nutritious</div>
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laudantium doloribus dicta quo autem dolorem suscipit nam
+                  recusandae, facere laboriosam eum architecto? Ratione
+                  cupiditate iste reprehenderit saepe beatae, quia blanditiis
+                  asperiores.</span
+                >
+                <button class="loadBtn">Buy now</button>
+              </div>
+              <div class="container-img">
+                <img
+                  src="img/glass-tea-with-fruit-berries-it_1293074-20651.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="container fade-in mb-5 rowContent">
+              <div class="container contentRow">
+                <div class="h3">Hygiene comes first</div>
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laudantium doloribus dicta quo autem dolorem suscipit nam
+                  recusandae, facere laboriosam eum architecto? Ratione
+                  cupiditate iste reprehenderit saepe beatae, quia blanditiis
+                  asperiores.</span
+                >
+                <button class="loadBtn">Buy now</button>
+              </div>
+              <div class="container-img">
+                <img src="img/there-is-glass-fruit-with-water-splashing-out-it-generative-ai_958124-17968.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+   
+
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const faders = document.querySelectorAll(".fade-in");
+
+        const appearOptions = {
+          threshold: 0.2,
+        };
+
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          });
+        }, appearOptions);
+
+        faders.forEach((fader) => {
+          appearOnScroll.observe(fader);
+        });
+      });
+
+      //
+    </script>
+
+
+
+
+
+
+
+
+<footer class="">
+  <div class="contact-form container">
+    <h3 class="fw-bolder py-3">Contact us</h3>
+        <form class="frm">
+          <div class="mb-4">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="mb-4">
+        <label for="email" class="form-label">email</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="mb-4">
+        <label for="phone" class="form-label">Phone number</label>
+        <input type="tel" class="form-control" id="name" required width="50%">
+      </div>
+      <div class="mb-4">
+        <label for="message" class="form-label">Feedback</label>
+        <textarea class="form-control" id="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn  btn-send fw-bolder">SEND</button>
+        </form>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

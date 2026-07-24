@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Performance | Premium Fitness & Athletic Club</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    :root {
+      --bg-dark: #090d16;
+      --card-dark: #111827;
+      --accent-cyan: #06b6d4;
+      --border-dark: #1f2937;
+      --text-muted: #9ca3af;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: #f3f4f6;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: rgba(9, 13, 22, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 110px 0 90px 0;
+      background: radial-gradient(circle at top right, rgba(6, 182, 212, 0.08), transparent 50%);
+    }
+
+    /* Cards */
+    .pricing-card {
+      background-color: var(--card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px -10px rgba(6, 182, 212, 0.2);
+    }
+
+    .pricing-card.featured {
+      border: 2px solid var(--accent-cyan);
+      position: relative;
+    }
+
+    .badge-featured {
+      background-color: var(--accent-cyan);
+      color: #000000;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      position: absolute;
+      top: -14px;
+      right: 24px;
+    }
+
+    /* Form Controls */
+    .form-control, .form-select {
+      background-color: #1f2937;
+      border: 1px solid #374151;
+      color: #ffffff;
+      padding: 12px;
+    }
+
+    .form-control:focus, .form-select:focus {
+      background-color: #1f2937;
+      border-color: var(--accent-cyan);
+      color: #ffffff;
+      box-shadow: 0 0 0 0.25rem rgba(6, 182, 212, 0.15);
+    }
+
+    .form-control::placeholder {
+      color: #6b7280;
+    }
+
+    .btn-cyan {
+      background-color: var(--accent-cyan);
+      color: #000000;
+      font-weight: 700;
+    }
+
+    .btn-cyan:hover {
+      background-color: #22d3ee;
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-extrabold fs-4 tracking-tight" href="#">
+        <i class="bi bi-lightning-charge-fill text-info me-1"></i>APEX<span class="text-info">FIT</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fw-medium align-items-center">
+          <li class="nav-item"><a class="nav-link text-light me-3" href="#amenities">Amenities</a></li>
+          <li class="nav-item"><a class="nav-link text-light me-3" href="#plans">Memberships</a></li>
+          <li class="nav-item"><a class="btn btn-cyan px-4 py-2" href="#register">Join Apex</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <span class="badge bg-dark border border-secondary text-info mb-3 px-3 py-2 fw-semibold rounded-pill">
+            <i class="bi bi-star-fill me-1"></i> Executive Performance Club
+          </span>
+          <h1 class="display-4 fw-extrabold text-white mb-3">Elevate Your Athletic Potential</h1>
+          <p class="lead text-secondary mb-4 fs-6">Experience state-of-the-art biometric training equipment, recovery hydro-saunas, and personal coaching designed for peak human conditioning.</p>
+          <div class="d-flex gap-3">
+            <a href="#plans" class="btn btn-cyan btn-lg px-4 py-3 fs-6">View Tiered Plans</a>
+            <a href="#register" class="btn btn-outline-light btn-lg px-4 py-3 fs-6">Book Day Pass</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Gym Interior" class="img-fluid rounded-4 shadow-lg border border-secondary border-opacity-25">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Tiers Section -->
+  <section id="plans" class="py-5">
+    <div class="container py-4">
+      <div class="text-center max-width-600 mx-auto mb-5">
+        <h2 class="fw-bold fs-2 text-white">Membership Programs</h2>
+        <p class="text-secondary">Flexible monthly plans tailored to individual conditioning goals.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Standard Plan -->
+        <div class="col-md-5 col-lg-4">
+          <div class="pricing-card h-100 p-4 p-lg-5 d-flex flex-column justify-content-between">
+            <div>
+              <h3 class="h4 fw-bold text-white mb-2">Club Access</h3>
+              <p class="text-secondary fs-6 mb-4">Full access to gym facilities & cardio zones.</p>
+              <div class="mb-4">
+                <span class="display-5 fw-extrabold text-white">$49</span>
+                <span class="text-secondary">/ month</span>
+              </div>
+              <ul class="list-unstyled text-secondary mb-4 fs-6">
+                <li class="mb-2"><i class="bi bi-check-lg text-info me-2"></i>Unlimited Floor Access</li>
+                <li class="mb-2"><i class="bi bi-check-lg text-info me-2"></i>Locker Room & Sauna</li>
+                <li class="mb-2"><i class="bi bi-check-lg text-info me-2"></i>Mobile App Access</li>
+              </ul>
+            </div>
+            <a href="#register" class="btn btn-outline-light w-100 py-3 fw-bold">Select Standard</a>
+          </div>
+        </div>
+
+        <!-- Executive Pro Plan -->
+        <div class="col-md-5 col-lg-4">
+          <div class="pricing-card featured h-100 p-4 p-lg-5 d-flex flex-column justify-content-between">
+            <span class="badge-featured">Most Popular</span>
+            <div>
+              <h3 class="h4 fw-bold text-white mb-2">Executive Performance</h3>
+              <p class="text-secondary fs-6 mb-4">Complete access + recovery & private coaching.</p>
+              <div class="mb-4">
+                <span class="display-5 fw-extrabold text-white">$99</span>
+                <span class="text-secondary">/ month</span>
+              </div>
+              <ul class="list-unstyled text-secondary mb-4 fs-6">
+                <li class="mb-2"><i class="bi bi-check-lg text-info me-2"></i>24/7 All-Access Pass</li>
+                <li class="mb-2"><i class="bi bi-check-lg text-info me-2"></i>2x Monthly Trainer Sessions</li>
+                <li class="mb-2"><i class="bi bi-check-lg text-info me-2"></i>Cryotherapy & Hydro-Lounge</li>
+                <li class="mb-2"><i class="bi bi-check-lg text-info me-2"></i>Guest Passes (2/mo)</li>
+              </ul>
+            </div>
+            <a href="#register" class="btn btn-cyan w-100 py-3">Select Executive</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Member Registration Form -->
+  <section id="register" class="py-5 bg-dark">
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="pricing-card p-4 p-md-5">
+            <h2 class="fw-bold text-white mb-1">Start Your Membership</h2>
+            <p class="text-secondary mb-4">Complete your details to activate your digital access key.</p>
+
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label text-secondary fw-semibold">First Name</label>
+                <input type="text" class="form-control" placeholder="Alex" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-secondary fw-semibold">Last Name</label>
+                <input type="text" class="form-control" placeholder="Morgan" required>
+              </div>
+              <div class="col-md-12">
+                <label class="form-label text-secondary fw-semibold">Email Address</label>
+                <input type="email" class="form-control" placeholder="alex@company.com" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-secondary fw-semibold">Primary Goal</label>
+                <select class="form-select">
+                  <option selected>Strength & Muscle</option>
+                  <option>Cardio & Endurance</option>
+                  <option>Athletic Conditioning</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-secondary fw-semibold">Selected Tier</label>
+                <select class="form-select">
+                  <option>Club Access ($49/mo)</option>
+                  <option selected>Executive ($99/mo)</option>
+                </select>
+              </div>
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-cyan w-100 py-3 text-uppercase">Register Member Account</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 border-top border-secondary border-opacity-25 text-center text-secondary fs-6">
+    <div class="container">
+      &copy; 2026 Apex Performance Clubs LLC. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

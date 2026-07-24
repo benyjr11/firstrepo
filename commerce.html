@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreatorHub NG - Dashboard</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        /* BASE STYLING: Deep Navy + Dark Magenta Radial Glow */
+        body {
+            background: radial-gradient(circle at 80% 20%, rgba(190, 24, 93, 0.15), transparent 40%),
+                        radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.12), transparent 40%),
+                        linear-gradient(135deg, #070b14, #0f172a);
+            background-attachment: fixed;
+            color: #e2e8f0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* GLASS PANEL: Premium Saturated Glass with Highlight Borders */
+        .glass-panel {
+            background: rgba(18, 25, 43, 0.55);
+            backdrop-filter: blur(20px) saturate(190%);
+            -webkit-backdrop-filter: blur(20px) saturate(190%);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+            border-left: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 20px;
+            box-shadow: 0 10px 35px -5px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .glass-panel:hover {
+            transform: translateY(-2px);
+            border: 1px solid rgba(217, 70, 239, 0.3);
+            box-shadow: 0 12px 40px -5px rgba(190, 24, 93, 0.2);
+        }
+
+        /* Section Headers with Magenta Accent Border */
+        .section-header {
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            color: #f472b6;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-left: 3px solid #be185d;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Accent Text & Buttons */
+        .text-pink-accent { color: #f472b6; }
+        .text-positive { color: #4ade80; }
+        .text-muted-custom { color: #94a3b8; }
+
+        .btn-pink-accent {
+            background: linear-gradient(135deg, #be185d, #9d174d);
+            color: #ffffff;
+            border: 1px solid rgba(244, 114, 182, 0.3);
+            font-weight: 600;
+            border-radius: 10px;
+            padding: 0.5rem 1.2rem;
+            transition: all 0.3s ease;
+        }
+        .btn-pink-accent:hover {
+            background: linear-gradient(135deg, #db2777, #be185d);
+            color: #ffffff;
+            box-shadow: 0 0 20px rgba(217, 70, 239, 0.4);
+        }
+
+        /* Custom Status Badges */
+        .badge-status {
+            font-weight: 600;
+            font-size: 0.75rem;
+            padding: 0.4em 0.85em;
+            border-radius: 50px;
+        }
+        .badge-success-ng {
+            background-color: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        .badge-pending-ng {
+            background-color: rgba(234, 179, 8, 0.15);
+            color: #facc15;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+        }
+
+        /* Chart Styling with Gradient Bars */
+        .chart-bar-ng {
+            background: linear-gradient(180deg, #db2777 0%, rgba(190, 24, 93, 0.15) 100%);
+            border-radius: 8px 8px 2px 2px;
+            width: 12px;
+            transition: all 0.2s ease;
+        }
+        .chart-bar-ng:hover {
+            background: linear-gradient(180deg, #f472b6 0%, #db2777 100%);
+            box-shadow: 0 0 12px rgba(244, 114, 182, 0.6);
+        }
+
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav class="navbar navbar-expand-lg border-bottom border-white-10 py-3 mb-4">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold text-white fs-4 d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-shop-window text-pink-accent"></i> CreatorHub NG
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <span class="text-muted-custom small d-none d-sm-inline">Seller ID: <strong>NG-CH-7741</strong></span>
+                <div class="rounded-circle text-white d-flex align-items-center justify-content-center" 
+                     style="width: 40px; height: 40px; font-weight: 700; background: linear-gradient(135deg, #be185d, #831843); border: 1px solid rgba(244, 114, 182, 0.4);">
+                    JN
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="container-fluid px-4 flex-grow-1 mb-5">
+        
+        <!-- ========================================== -->
+        <!-- SECTION 1: MONTHLY SNAPSHOT (KPI CARDS)    -->
+        <!-- ========================================== -->
+        <div class="section-header">01 Monthly Snapshot</div>
+        <section class="row g-3 mb-5">
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="glass-panel p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="fw-semibold small text-white">Net Revenue</span>
+                        <i class="bi bi-currency-exchange fs-5 text-pink-accent"></i>
+                    </div>
+                    <h3 class="fw-bold mb-1 text-white">₦420,500.00</h3>
+                    <small class="text-positive"><i class="bi bi-graph-up"></i> +18.2% vs June</small>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="glass-panel p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="fw-semibold small text-white">Digital Downloads</span>
+                        <i class="bi bi-file-earmark-arrow-down fs-5 text-info"></i>
+                    </div>
+                    <h3 class="fw-bold mb-1 text-white">915</h3>
+                    <small class="text-muted-custom">Across 8 active assets</small>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="glass-panel p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="fw-semibold small text-white">Avg. Order Value</span>
+                        <i class="bi bi-receipt-cutoff fs-5 text-warning"></i>
+                    </div>
+                    <h3 class="fw-bold mb-1 text-white">₦4,250.00</h3>
+                    <small class="text-positive"><i class="bi bi-graph-up"></i> +5.1% this week</small>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="glass-panel p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="fw-semibold small text-white">Current Payout</span>
+                        <i class="bi bi-bank fs-5 text-pink-accent"></i>
+                    </div>
+                    <h3 class="fw-bold mb-1 text-white">Access Bank</h3>
+                    <small class="text-muted-custom">Settlement: Next Friday</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 2: ASSET PERFORMANCE & CHART       -->
+        <!-- ========================================== -->
+        <div class="section-header">02 Asset Performance</div>
+        <section class="row g-3 mb-5">
+            <!-- Growth Trend Chart Mockup -->
+            <div class="col-12 col-lg-8">
+                <div class="glass-panel p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h5 class="fw-bold mb-0 text-white">Sales Velocity</h5>
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="badge bg-white bg-opacity-10 text-white border border-white-10">Last 30 Days</span>
+                            <button class="btn btn-sm btn-pink-accent">Download Report</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Simulated Bar Graph Visual -->
+                    <div class="d-flex align-items-end justify-content-between pt-3" style="height: 180px; padding: 0 10px;">
+                        <div class="chart-bar-ng" style="height: 35%;" title="Week 1: ₦115k"></div>
+                        <div class="chart-bar-ng" style="height: 60%;" title="Week 2: ₦198k"></div>
+                        <div class="chart-bar-ng" style="height: 52%;" title="Week 3: ₦171k"></div>
+                        <div class="chart-bar-ng" style="height: 85%;" title="Week 4: ₦280k"></div>
+                        <div class="chart-bar-ng" style="height: 48%;" title="Week 5: ₦158k"></div>
+                        <div class="chart-bar-ng" style="height: 95%;" title="Week 6: ₦313k"></div>
+                        <div class="chart-bar-ng" style="height: 65%;" title="Week 7: ₦214k"></div>
+                        <div class="chart-bar-ng" style="height: 70%;" title="Week 8: ₦231k"></div>
+                    </div>
+                    <div class="d-flex justify-content-between text-muted-custom small mt-2" style="padding: 0 10px;">
+                        <span>July W1</span><span>W2</span><span>W3</span><span>W4</span>
+                        <span>Aug W1</span><span>W2</span><span>W3</span><span>W4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Products Data List -->
+            <div class="col-12 col-lg-4">
+                <div class="glass-panel p-4 h-100">
+                    <h5 class="fw-bold mb-3 text-white">Best Selling Assets</h5>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <h6 class="mb-0 fw-semibold text-white">E-book: Web Dev Guide</h6>
+                                <small class="text-muted-custom">PDF Digital Guide</small>
+                            </div>
+                            <span class="fw-bold text-pink-accent">₦210,000</span>
+                        </div>
+                        <hr class="my-0 border-white-10">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <h6 class="mb-0 fw-semibold text-white">PHP Security Script V3</h6>
+                                <small class="text-muted-custom">Backend Code Module</small>
+                            </div>
+                            <span class="fw-bold text-pink-accent">₦125,500</span>
+                        </div>
+                        <hr class="my-0 border-white-10">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <h6 class="mb-0 fw-semibold text-white">Restaurant UI Template</h6>
+                                <small class="text-muted-custom">Layout Files</small>
+                            </div>
+                            <span class="fw-bold text-pink-accent">₦85,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 3: RECENT ORDERS (DATA TABLE)      -->
+        <!-- ========================================== -->
+        <div class="section-header">03 Order Queue</div>
+        <section class="row">
+            <div class="col-12">
+                <div class="glass-panel p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="fw-bold mb-0 text-white">Latest Purchases</h5>
+                        <button class="btn btn-sm btn-outline-light"><i class="bi bi-funnel"></i> Filter Orders</button>
+                    </div>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-borderless align-middle mb-0 text-white">
+                            <thead>
+                                <tr class="text-muted-custom border-bottom border-white-10 small">
+                                    <th>TRANSACTION ID</th>
+                                    <th>CUSTOMER EMAIL</th>
+                                    <th>ASSET PURCHASED</th>
+                                    <th>AMOUNT</th>
+                                    <th>STATUS</th>
+                                    <th class="text-end">TIMESTAMP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-bottom border-white-10">
+                                    <td class="fw-semibold">CH-88419</td>
+                                    <td>ibrahim.k@outlook.com</td>
+                                    <td>PHP Security Script V3</td>
+                                    <td class="fw-bold">₦12,500.00</td>
+                                    <td><span class="badge-status badge-success-ng">Complete</span></td>
+                                    <td class="text-end text-muted-custom">5 mins ago</td>
+                                </tr>
+                                <tr class="border-bottom border-white-10">
+                                    <td class="fw-semibold">CH-88418</td>
+                                    <td>mary.dev@paystack.io</td>
+                                    <td>Web Dev Guide</td>
+                                    <td class="fw-bold">₦5,000.00</td>
+                                    <td><span class="badge-status badge-success-ng">Complete</span></td>
+                                    <td class="text-end text-muted-custom">42 mins ago</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold">CH-88417</td>
+                                    <td>sam.a@flw.co</td>
+                                    <td>Restaurant UI Template</td>
+                                    <td class="fw-bold">₦15,000.00</td>
+                                    <td><span class="badge-status badge-pending-ng">Awaiting Payment</span></td>
+                                    <td class="text-end text-muted-custom">2 hours ago</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="mt-auto border-top border-white-10 py-3 bg-black bg-opacity-30">
+        <div class="container-fluid px-4 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+            <span class="text-muted-custom small">&copy; 2026 CreatorHub NG. Access Bank Plc. Authorized Merchant.</span>
+            <div class="d-flex gap-3 small text-muted-custom">
+                <a href="#" class="text-reset text-decoration-none">API Docs</a>
+                <a href="#" class="text-reset text-decoration-none">Security</a>
+                <a href="#" class="text-reset text-decoration-none">Support Portal</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,3 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
 ._herotext{
     font-size: 64px;
+}
+._meno{
+    margin: 0px 0px 0px 0px ;
+    padding: 150px 0px 100px 0px;
 }
